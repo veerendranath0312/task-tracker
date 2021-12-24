@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Task Tracker</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Task Tracker</h1>
+
+      <form action="">
+        <div class="form-group">
+          <label for="task">Task</label>
+          <input type="text" name="task" id="task" placeholder="Add Task" />
+        </div>
+        <div class="form-group">
+          <label for="day-and-time">Day & Time</label>
+          <input
+            type="text"
+            name="day-and-time"
+            id="day-and-time"
+            placeholder="Add Day & Time"
+          />
+        </div>
+        <button>Save Task</button>
+      </form>
+
+      <div class="task-list">
+        <div class="list-item">
+          <div class="left">
+            <h4>Doctors Appointment</h4>
+            <p>Feb 5th at 2:30pm</p>
+          </div>
+          <div class="right">
+            <button><ion-icon name="trash-outline"></ion-icon></button>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="left">
+            <h4>Meeting at School</h4>
+            <p>Feb 6th at 1:30pm</p>
+          </div>
+          <div class="right">
+            <button><ion-icon name="trash-outline"></ion-icon></button>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>Copyright &copy; 2021</p>
+      </footer>
+    </div>
+  </body>
+
+  <!-- Ionicons links -->
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+</html>
