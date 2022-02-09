@@ -3,8 +3,7 @@ const form = document.querySelector('form')
 const task = document.getElementById('task')
 const dayAndTime = document.getElementById('day-and-time')
 const taskList = document.querySelector('.task-list')
-
-taskList.innerHTML = ''
+const template = document.querySelector('template')
 
 form.addEventListener('submit', e => {
   e.preventDefault()
@@ -21,10 +20,15 @@ form.addEventListener('submit', e => {
       </div>
     </div>
   `
+  const listItemTemplate = template.content.cloneNode(true).children[0]
+  const taskName = listItemTemplate.querySelector('h4')
+  const date = listItemTemplate.querySelector('p')
+  taskName.textContent = task.value
+  date.textContent = dayAndTime.value
 
-  // Adding tas to the taskList
+  // Adding task to the taskList
   if (task.value && dayAndTime.value) {
-    taskList.insertAdjacentHTML('beforeend', listItemHtml)
+    taskList.append(listItemTemplate)
   }
 
   // Clear the input fields
@@ -34,5 +38,7 @@ form.addEventListener('submit', e => {
 
 // removing the task from the taskList
 taskList.addEventListener('click', e => {
-  e.target.closest('.list-item').remove()
+  if (e.target.closest('.trash-icon')) {
+    e.target.closest('.list-item').remove()
+  }
 })
