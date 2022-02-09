@@ -30,31 +30,26 @@
         <button>Save Task</button>
       </form>
 
-      <div class="task-list">
-        <div class="list-item">
-          <div class="left">
-            <h4>Doctors Appointment</h4>
-            <p>Feb 5th at 2:30pm</p>
-          </div>
-          <div class="right">
-            <button><ion-icon name="trash-outline"></ion-icon></button>
-          </div>
-        </div>
-        <div class="list-item">
-          <div class="left">
-            <h4>Meeting at School</h4>
-            <p>Feb 6th at 1:30pm</p>
-          </div>
-          <div class="right">
-            <button><ion-icon name="trash-outline"></ion-icon></button>
-          </div>
-        </div>
-      </div>
+      <div class="task-list"></div>
 
       <footer>
         <p>Copyright &copy; 2021</p>
       </footer>
     </div>
+
+    <template>
+      <div class="list-item">
+        <div class="left">
+          <h4>Meeting at School</h4>
+          <p>Feb 6th at 1:30pm</p>
+        </div>
+        <div class="right">
+          <button class="trash-icon">
+            <ion-icon name="trash-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </template>
   </body>
 
   <!-- Ionicons links -->
