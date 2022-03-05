@@ -96,3 +96,29 @@ footer p {
   text-align: center;
   font-size: 14px;
 }
+
+/* Error msg styling */
+.error-msg {
+  background: rgb(233, 132, 132);
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  animation: fade-in 0.5s;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
